@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS_SQS", "AWS_SQS\AWS_SQS.csproj", "{7F35CB11-F38D-472F-B7D7-FC479278C34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Api", "Customers.Api\Customers.Api.csproj", "{2A6A60C6-1B27-493A-9E38-ED53032BF0A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F35CB11-F38D-472F-B7D7-FC479278C34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F35CB11-F38D-472F-B7D7-FC479278C34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F35CB11-F38D-472F-B7D7-FC479278C34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F35CB11-F38D-472F-B7D7-FC479278C34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6A60C6-1B27-493A-9E38-ED53032BF0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6A60C6-1B27-493A-9E38-ED53032BF0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6A60C6-1B27-493A-9E38-ED53032BF0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6A60C6-1B27-493A-9E38-ED53032BF0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
