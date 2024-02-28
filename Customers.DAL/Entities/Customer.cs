@@ -32,7 +32,7 @@ public class Customer
     /// <summary>
     /// Gets or sets the full name of the customer.
     /// </summary>
-    /// <value>The customer's full name. This field is required.</value>
+    /// <value>The customer's full name.</value>
     [MaxLength(255)]
     public string? FullName { get; set; }
     

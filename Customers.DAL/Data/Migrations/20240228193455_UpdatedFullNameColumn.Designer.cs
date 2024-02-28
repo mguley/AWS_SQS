@@ -3,6 +3,7 @@ using System;
 using Customers.DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Customers.DAL.Data.Migrations
 {
     [DbContext(typeof(CustomersContext))]
-    partial class CustomersContextModelSnapshot : ModelSnapshot
+    [Migration("20240228193455_UpdatedFullNameColumn")]
+    partial class UpdatedFullNameColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");
