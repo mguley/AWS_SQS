@@ -20,7 +20,7 @@ public class Customer
     /// Gets the unique identifier for the customer.
     /// </summary>
     /// <value>The customer's globally unique identifier (GUID).</value>
-    public Guid Guid { get; private set; } = Guid.NewGuid();
+    public Guid Guid { get; init; } = Guid.NewGuid();
     
     /// <summary>
     /// Gets or sets the GitHub username of the customer.
@@ -34,7 +34,7 @@ public class Customer
     /// </summary>
     /// <value>The customer's full name. This field is required.</value>
     [MaxLength(255)]
-    public required string FullName { get; set; }
+    public string? FullName { get; set; }
     
     /// <summary>
     /// Gets or sets the email address of the customer.

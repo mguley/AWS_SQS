@@ -1,4 +1,7 @@
-GET http://localhost:5041/get
+GET http://localhost:5041/customers
+
+###
+GET http://localhost:5041/customers/75d5d59f-86a1-4f02-aa7b-6cb7c4e1148f
 
 ###
 POST http://localhost:5041/post
