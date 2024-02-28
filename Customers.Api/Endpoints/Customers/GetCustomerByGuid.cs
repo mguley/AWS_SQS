@@ -10,13 +10,16 @@ namespace Customers.Api.Endpoints.Customers;
 /// </summary>
 public class GetCustomerByGuid : IEndpoint
 {
+    public const string GetCustomerEndpointName = "GetCustomer";
+    
     /// <summary>
     /// Configures the endpoint for retrieving a customer by GUID.
     /// </summary>
     /// <param name="app">The endpoint route builder to configure.</param>
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet(pattern: "customers/{rawId}", HandleGetCustomerByGuid);
+        app.MapGet(pattern: "customers/{rawId}", HandleGetCustomerByGuid)
+            .WithName(GetCustomerEndpointName);
     }
 
     /// <summary>

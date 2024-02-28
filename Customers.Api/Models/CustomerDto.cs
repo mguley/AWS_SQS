@@ -8,7 +8,7 @@
 /// <param name="FullName">The full name of the customer.</param>
 /// <param name="Email">The email address of the customer.</param>
 public record CustomerDto(
-    Guid Guid,
+    Guid? Guid,
     string? GitHubUsername,
     string? FullName,
     string? Email);

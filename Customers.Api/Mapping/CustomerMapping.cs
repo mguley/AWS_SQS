@@ -17,7 +17,7 @@ public static class CustomerMapping
     {
         return new Customer
         {
-            Guid = customerDto.Guid,
+            Guid = customerDto.Guid ?? Guid.NewGuid(),
             GitHubUsername = customerDto.GitHubUsername,
             FullName = customerDto.FullName,
             Email = customerDto.Email
