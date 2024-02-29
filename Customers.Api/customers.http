@@ -1,7 +1,17 @@
-GET http://localhost:5041/get
+GET http://localhost:5041/customers
 
 ###
-POST http://localhost:5041/post
+GET http://localhost:5041/customers/5988551f-c766-49fd-8627-e57b9c5e1b8c
+
+###
+POST http://localhost:5041/customers
+Content-Type: application/json
+
+{
+  "gitHubUsername": "user123",
+  "fullName": "username123",
+  "email": "email@example.com"
+}
 
 ###
 PUT http://localhost:5041/put
