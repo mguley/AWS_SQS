@@ -1,7 +1,7 @@
 GET http://localhost:5041/customers
 
 ###
-GET http://localhost:5041/customers/5988551f-c766-49fd-8627-e57b9c5e1b8c
+GET http://localhost:5041/customers/90d89b14-ded2-4363-b5f0-8d08e4f3dc14
 
 ###
 POST http://localhost:5041/customers
@@ -14,7 +14,14 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5041/put
+PUT http://localhost:5041/customers/fe31f1ce-1593-4314-9d04-133928e4ff20
+Content-Type: application/json
+
+{
+  "guid": "fe31f1ce-1593-4314-9d04-133928e4ff20",
+  "gitHubUsername": "55555",
+  "email": ""
+}
 
 ###
-DELETE http://localhost:5041/delete
+DELETE http://localhost:5041/customers/fe31f1ce-1593-4314-9d04-133928e4ff20
