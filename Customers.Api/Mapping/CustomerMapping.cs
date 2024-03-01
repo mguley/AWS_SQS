@@ -37,4 +37,16 @@ public static class CustomerMapping
             FullName: customer.FullName,
             Email: customer.Email);
     }
+
+    /// <summary>
+    /// Updates an existing Customer entity with data from a CustomerDto object.
+    /// </summary>
+    /// <param name="customer">The Customer entity to be updated.</param>
+    /// <param name="customerDto">The CustomerDto containing the new data.</param>
+    public static void UpdateFromDto(this Customer customer, CustomerDto customerDto)
+    {
+        customer.GitHubUsername = customerDto?.GitHubUsername ?? customer.GitHubUsername;
+        customer.FullName = customerDto?.FullName ?? customer.FullName;
+        customer.Email = customerDto?.Email ?? customer.Email;
+    }
 }
