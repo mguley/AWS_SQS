@@ -3,7 +3,7 @@ using Customers.DAL.Data.InitDataFactory;
 using Customers.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Customers.Api.Data;
+namespace Customers.Api.Extensions;
 
 /// <summary>
 /// Provides extension methods for initializing and migrating the database.

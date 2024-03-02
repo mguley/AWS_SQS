@@ -1,4 +1,5 @@
 ﻿using Customers.Api.Abstractions;
+using Customers.Api.Events.Customer;
 using Customers.Api.Mapping;
 using Customers.Api.Models;
 using Customers.DAL.Abstractions;
@@ -9,7 +10,7 @@ namespace Customers.Api.Endpoints.Customers;
 /// <summary>
 /// Represents the POST operation for creating a new customer in the system.
 /// </summary>
-public class CreatePost : IEndpoint
+public class CreateCustomer(IEventService eventService) : BaseEndpoint(eventService: eventService), IEndpoint
 {
     /// <summary>
     /// Configures the endpoint for creating a new customer, mapping the POST action to the specified route.
@@ -27,7 +28,7 @@ public class CreatePost : IEndpoint
     /// <param name="logger">The logger for capturing log information.</param>
     /// <param name="customerDto">The customer DTO containing the data for creating a new customer record.</param>
     /// <returns>A task representing the asynchronous operation, resulting in an HTTP response indicating success or failure of customer creation.</returns>
-    private async Task<IResult> HandleCreateCustomer(ICustomerRepository customerRepository, ILogger<CreatePost> logger,
+    private async Task<IResult> HandleCreateCustomer(ICustomerRepository customerRepository, ILogger<CreateCustomer> logger,
         CustomerDto customerDto)
     {
         try
@@ -39,6 +40,9 @@ public class CreatePost : IEndpoint
             {
                 return Results.Problem(detail: "Failed to create the customer.");
             }
+
+            await EventService.DispatchAsync(
+                applicationEvent: new CustomerCreatedEvent(customerDto: customerEntity.ToDto()));
             
             return Results.CreatedAtRoute(
                 routeName: GetCustomerByGuid.GetCustomerEndpointName, 

@@ -1,4 +1,5 @@
 ﻿using Customers.Api.Abstractions;
+using Customers.Api.Events.Customer;
 using Customers.Api.Mapping;
 using Customers.Api.Models;
 using Customers.DAL.Abstractions;
@@ -9,7 +10,7 @@ namespace Customers.Api.Endpoints.Customers;
 /// <summary>
 /// Endpoint for updating customer by their unique identifier.
 /// </summary>
-public class UpdateCustomer : IEndpoint
+public class UpdateCustomer(IEventService eventService) : BaseEndpoint(eventService: eventService), IEndpoint
 {
     /// <summary>
     /// Configures the endpoint for updating a customer by GUID.
@@ -51,6 +52,9 @@ public class UpdateCustomer : IEndpoint
             {
                 return Results.Problem(detail: $"Failed to update the customer with GUID {guid}.");
             }
+
+            await EventService.DispatchAsync(
+                applicationEvent: new CustomerUpdatedEvent(customerDto: existingCustomer.ToDto()));
 
             return Results.Ok(value: $"Customer with GUID {guid} was successfully updated.");
         }
