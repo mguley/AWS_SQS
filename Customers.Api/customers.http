@@ -14,11 +14,11 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5041/customers/fe31f1ce-1593-4314-9d04-133928e4ff20
+PUT http://localhost:5041/customers/de4addca-25a8-40c4-bdd3-ed9d43110792
 Content-Type: application/json
 
 {
-  "guid": "fe31f1ce-1593-4314-9d04-133928e4ff20",
+  "guid": "de4addca-25a8-40c4-bdd3-ed9d43110792",
   "gitHubUsername": "55555",
   "email": ""
 }
