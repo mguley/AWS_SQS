@@ -1,5 +1,6 @@
 ﻿using Customers.DAL.Data;
 using Customers.DAL.Data.InitDataFactory;
+using Customers.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Customers.Api.Data;
@@ -18,8 +19,8 @@ public static class DataExtensions
     /// <returns>A task representing the asynchronous operation of the database migration and data seeding.</returns>
     public static async Task MigrateDbAsync(this WebApplication app)
     {
-        using var scope = app.Services.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<CustomersContext>();
+        using IServiceScope scope = app.Services.CreateScope();
+        await using CustomersContext dbContext = scope.ServiceProvider.GetRequiredService<CustomersContext>();
         await dbContext.Database.MigrateAsync();
         await SeedDataAsync(dbContext: dbContext, app: app);
     }
@@ -35,9 +36,9 @@ public static class DataExtensions
     {
         if (!dbContext.Customers.Any())
         {
-            using var scope = app.Services.CreateScope();
-            var dataFactory = scope.ServiceProvider.GetRequiredService<AbstractDataFactory>();
-            var customersData = dataFactory.GetCustomersInitialData();
+            using IServiceScope scope = app.Services.CreateScope();
+            AbstractDataFactory dataFactory = scope.ServiceProvider.GetRequiredService<AbstractDataFactory>();
+            IEnumerable<Customer> customersData = dataFactory.GetCustomersInitialData();
             await dbContext.Customers.AddRangeAsync(entities: customersData);
             await dbContext.SaveChangesAsync();
         }
