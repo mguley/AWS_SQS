@@ -11,7 +11,8 @@ namespace Customers.Api.Events.Customer;
 public class CustomerUpdatedEvent(CustomerDto customerDto) : IApplicationEvent
 {
     /// <summary>
-    /// Gets the customer data associated with this event.
+    /// Gets customer data associated with this event.
     /// </summary>
-    public CustomerDto Data { get; } = customerDto;
+    /// <returns></returns>
+    public object GetPayload() => customerDto;
 }

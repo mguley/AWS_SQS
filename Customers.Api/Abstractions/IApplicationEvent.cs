@@ -6,4 +6,9 @@
 /// </summary>
 public interface IApplicationEvent
 {
+    /// <summary>
+    /// Gets payload associated with an event.
+    /// </summary>
+    /// <returns></returns>
+    object GetPayload();
 }
