@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.DAL", "Customers.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Messaging", "Customers.Messaging\Customers.Messaging.csproj", "{540A4645-4903-4AB7-A739-11A43441A3EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Messaging.UnitTests", "Customers.Messaging.UnitTests\Customers.Messaging.UnitTests.csproj", "{AC86D211-44D1-47D6-A904-C4369884A57B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{540A4645-4903-4AB7-A739-11A43441A3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{540A4645-4903-4AB7-A739-11A43441A3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{540A4645-4903-4AB7-A739-11A43441A3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC86D211-44D1-47D6-A904-C4369884A57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC86D211-44D1-47D6-A904-C4369884A57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC86D211-44D1-47D6-A904-C4369884A57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC86D211-44D1-47D6-A904-C4369884A57B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

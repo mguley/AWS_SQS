@@ -60,7 +60,7 @@ public class SqsMessenger : ISqsMessenger
     /// Retrieves the URL for the configured Amazon SQS queue.
     /// </summary>
     /// <returns>A task representing the asynchronous operation, with the queue URL as a string.</returns>
-    private async Task<string> GetQueueUrlAsync()
+    public async Task<string> GetQueueUrlAsync()
     {
         if (_queueUrl is not null)
         {
