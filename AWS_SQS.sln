@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Messaging", "Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Messaging.UnitTests", "Customers.Messaging.UnitTests\Customers.Messaging.UnitTests.csproj", "{AC86D211-44D1-47D6-A904-C4369884A57B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Api.IntegrationTests", "Customers.Api.IntegrationTests\Customers.Api.IntegrationTests.csproj", "{5A618592-8558-4CF0-8B37-CCBD9099E33B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{AC86D211-44D1-47D6-A904-C4369884A57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC86D211-44D1-47D6-A904-C4369884A57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC86D211-44D1-47D6-A904-C4369884A57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A618592-8558-4CF0-8B37-CCBD9099E33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A618592-8558-4CF0-8B37-CCBD9099E33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A618592-8558-4CF0-8B37-CCBD9099E33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A618592-8558-4CF0-8B37-CCBD9099E33B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
